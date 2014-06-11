@@ -49,9 +49,10 @@ h1{font-size:24px; text-align:center;}
 
 .isletme h1 {text-align:left;
 color:#F30;}
-.ogrenci	{background-color:#FFF;
+.ogrenci{background-color:#FFF;
 			text-align:left;
 			font-size:12px;
 			margin:0px 0px;
+			padding:0px;
 }	
 

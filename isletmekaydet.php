@@ -17,6 +17,8 @@
 	$itel=$_POST['telefon'];
 	$ifax=$_POST['fax'];
 	$iadres=$_POST['adres'];
+	$igun=$_POST["gun"];
+
 	if($iid==-1)
 	{
 		$iid=idilekaydet("insert into isletme (isletmead,tel,fax,adres) values('$iad','$itel','$ifax','$iadres')","isletme","isletmeid");
@@ -24,8 +26,13 @@
 	}
 	if ($iid>0)
 	{
-		echo "yeni işletme öğretmene atanıyor.";
-		$s=sorgu("insert into ogretmen_isletme(isletmeid,ogretmenid,stajgun,aciklama) values('$iid','$ogr','Pazartesi','Açıklama yok')");
+			if($_POST["mod"]==1)
+			
+		$s=sorgu("insert into ogretmen_isletme(isletmeid,ogretmenid,stajgun,aciklama) values('$iid','$ogr','$igun','Açıklama yok')");
+		if($_POST["mod"]==2){
+		$s=sorgu("update isletme set isletmead='$iad',tel='$itel',fax='$ifax',adres='$iadres' where isletmeid=$iid");
+		$o=sorgu("update ogretmen_isletme stajgun=$igun where ogretmenid=$ogr and isletmeid=$iad");
+		}
 		header( 'Location: anasayfa.php' ) ;
 	}
 	

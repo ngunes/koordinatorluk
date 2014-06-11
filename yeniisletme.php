@@ -15,7 +15,7 @@
 	$ogr=$_SESSION['ogrid'];
 	if(!isset($_POST["isletme"])) {isletmelistesi();}
 	elseif($_POST["isletme"]=="yeni"){yeniisletme();}
-	else{isletmegetir($_POST["isletme"]);}
+	else{isletmegetir($_POST["isletme"],$_GET["mod"]);}
 ?>
 
 </body>

@@ -8,7 +8,7 @@
 		echo "<div id=\"ogretmen\"><h1>".$sonuc[2]." ".$sonuc[3]."</h1></div>";	
 		isletmelerigetir($ogr);
 	?>
-    <div id="isletmeekle" style="text-align:right"><a href="yeniisletme.php">Yeni İşletme Ekle</a></div>
+    <div id="isletmeekle" style="text-align:right"><a href="yeniisletme.php?mod=1">Yeni İşletme Ekle</a></div>
 </div>
 Iı Ğğ Üü Şş İi Öö Çç
 </body>

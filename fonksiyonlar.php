@@ -60,7 +60,7 @@ function yeniisletme(){
 	yaz ("</form>");
 }
 
-function isletmegetir($id){
+function isletmegetir($id,$m){
   	$isletme=teksorgu("select * from isletme where isletmeid=$id");
 	yaz ("<form name=\"yeniisletme\" action=\"isletmekaydet.php\" method=\"post\">");
 	yaz ("Isletme Adi :". "<input type=\"text\" name=\"isim\" value=$isletme[1] />");
@@ -68,6 +68,7 @@ function isletmegetir($id){
 	yaz ("Fax :<input type=\"text\" name=\"fax\" value=$isletme[3] />");
 	yaz ("Adres :<input type=\"text\" name=\"adres\"  value=$isletme[4] />");
 	yaz ("<input type=\"hidden\" name=\"iid\" value='$id' \>");
+	yaz ("<input type=\"hidden\" name=\"mod\" value='$m' \>");
 	yaz ("Staj Günü :<input type=\"text\" name=\"gun\">");
 	yaz("<input type=\"submit\" Value=\"kaydet\">");
 	yaz ("</form>");
@@ -104,8 +105,12 @@ function isletmelerigetir($oid){
 		$isletmeler=sorgu("Select oi.kayitid, I.* from ogretmen_isletme AS oi INNER JOIN isletme as I ON oi.isletmeid=I.isletmeid and oi.ogretmenid=$oid");
 	while($isl=mysqli_fetch_array($isletmeler)){
 		echo "<div class='isletme'>";
-			echo "<h1>".$isl[2]." ".$isl[3]."</h1>";
-			echo "<p> Tel :$isl[2]</p><p>Fax :$isl[3]</p><p>Adres :$isl[4]</p><p><a href=#>Rapor Yazdır</a></p>";
+			echo "<form name='isletme' action='yeniisletme.php?mod=2' method='post'>";
+			echo "<input type=\"hidden\" name=\"isletme\" value=$isl[1] />";
+			echo "<h1 onclick=\"this.form.submit()\">".$isl[2]." ".$isl[3]."</h1>";
+			echo "<input type=\"submit\" value=\"düzenle\" />";
+			echo "<p> Tel :$isl[2]</p><p>Fax :$isl[3]</p><p>Adres :$isl[4]</p><p><a href=#> [ Rapor Yazdır ] </a></p>";
+			echo "</form>";
 		  	ogrencilerigetir($isl[0]);
 			echo "<p><a href='ogrekle.php?isid=".$isl[0]."'>Öğrenci Ekle</a></p>";
 		echo "</div>";
