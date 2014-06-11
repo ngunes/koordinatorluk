@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	margin: 20px;
+	padding: 0;
+	background: #D4D4D4 url(img/img1.gif);
+	font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
+	color: #704B3A;
+}
+#anasayfa {width:1000px;
+			margin:0 auto;
+			border:1px solid black;
+			background-color:#CCC;
+			font-size:12px;
+			font-family:Arial, Helvetica, sans-serif;
+}
+h1{font-size:24px; text-align:center;}
+
+#ogretmen  {
+	width: 960px;
+	height: 50px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color:#333;
+}
+.isletme {	border:1px solid black;
+			margin-top:10px;
+			
+}
+.ogrenci	{background-color:#FFF;
+			text-align:left;
+			font-size:12px;
+			text-indent:10px;
+}	
+
