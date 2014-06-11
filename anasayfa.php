@@ -5,10 +5,11 @@
 		kontrol();
 		$ogr=$_SESSION['ogrid']; 
 		$sonuc=teksorgu("select * from ogretmen where ogretmenid=$ogr");
-		echo "<div id=\"ogretmen\"><h1>". $sonuc[0]." ".$sonuc[2]." ".$sonuc[3]."</h1></div>";	
+		echo "<div id=\"ogretmen\"><h1>".$sonuc[2]." ".$sonuc[3]."</h1></div>";	
 		isletmelerigetir($ogr);
 	?>
-    <div id="isletmeekle" style="text-align:right"><a href="yeniisletme.php">Yeni ��letme Ekle</div>
+    <div id="isletmeekle" style="text-align:right"><a href="yeniisletme.php">Yeni İşletme Ekle</a></div>
 </div>
+Iı Ğğ Üü Şş İi Öö Çç
 </body>
 </html>

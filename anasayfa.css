@@ -1,16 +1,34 @@
 @charset "utf-8";
 /* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+}
+body, input, textarea, select {
+	font: normal small "Trebuchet MS", Arial, Helvetica, sans-serif;
+	color: #704B3A;
+}
+h1 {
+	font-size: 2.2em;
+}
+
+h2 {
+	font-size: 1.7em;
+}
+
+h3 {
+	font-size: 1.3em;
+}
 body {
 	margin: 20px;
 	padding: 0;
 	background: #D4D4D4 url(img/img1.gif);
-	font-family: "Comic Sans MS", Arial, Helvetica, sans-serif;
-	color: #704B3A;
+
 }
 #anasayfa {width:1000px;
 			margin:0 auto;
-			border:1px solid black;
-			background-color:#CCC;
+			border:2px solid black;
+			background-color:#ccc;
 			font-size:12px;
 			font-family:Arial, Helvetica, sans-serif;
 }
@@ -22,14 +40,18 @@ h1{font-size:24px; text-align:center;}
 	margin: 0 auto;
 	padding: 20px;
 	background-color:#333;
+	color:#FC0;
 }
-.isletme {	border:1px solid black;
-			margin-top:10px;
-			
+.isletme {	border:3px solid black;
+			background-color:#CCC
+			margin:0 0;
 }
+
+.isletme h1 {text-align:left;
+color:#F30;}
 .ogrenci	{background-color:#FFF;
 			text-align:left;
 			font-size:12px;
-			text-indent:10px;
+			margin:0px 0px;
 }	
 
